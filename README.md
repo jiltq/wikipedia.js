@@ -14,3 +14,6 @@ npm i @jiltq/wikipedia.js
 yarn add @jiltq/wikipedia.js
 pnpm add @jiltq/wikipedia.js
 ```
+
+## Example usage
+
