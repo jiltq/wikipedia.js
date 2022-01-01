@@ -48,17 +48,23 @@ module.exports = class Page {
 		const request = new RestRequest(`page/lint/${this.title}${revision ? `/${revision}` : ''}`);
 		return await request.fetch();
 	}
+	/**
+	 * The summary response includes an extract of the first paragraph of the page in plain text and HTML as well as the type of page. This is useful for page previews (fka. Hovercards, aka. Popups) on the web and link previews in the apps.
+	 */
 	async summary() {
 		const request = new RestRequest(`page/summary/${this.title}`);
 		return await request.fetch();
 	}
+	/**
+	 * Gets the list of media items (images, audio, and video) in the order in which they appear on a given wiki page.
+	 * @param {number} revision Optional page revision. Note that older revisions are not stored, so request latency with the revision would be higher.
+	 */
 	async mediaFiles(revision = null) {
 		const request = new RestRequest(`page/media-list/${this.title}${revision ? `/${revision}` : ''}`);
 		return await request.fetch();
 	}
 	/**
-	 * 
-	 * @returns 
+	 * Returns summaries for 20 pages related to the given page. Summaries include page title, namespace and id along with short text description of the page and a thumbnail.
 	 */
 	async related() {
 		const request = new RestRequest(`page/related/${this.title}`);
