@@ -1,0 +1,22 @@
+{
+  "name": "@jiltq/wikipedia.js",
+  "version": "1.0.0",
+  "description": "Wikipedia API wrapper",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jiltq",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.6.0",
+    "node-fetch": "^2.6.6"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.32"
+  },
+  "keywords": [
+    "wikipedia",
+    "api"
+  ]
+}
