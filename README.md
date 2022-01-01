@@ -20,6 +20,7 @@ pnpm add @jiltq/wikipedia.js
 - Fetch page content in different formats
 - Fetch aggregated daily featured content
 - (COMING SOON) Fetch mobile-friendly page content
+- Extensive documentation
 
 ## Example usage
 To get a summary of the movie *Shrek*:
