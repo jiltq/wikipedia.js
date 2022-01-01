@@ -18,5 +18,9 @@
   "keywords": [
     "wikipedia",
     "api"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiltq/wikipedia.js.git"
+  }
 }
