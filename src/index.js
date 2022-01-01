@@ -1,3 +1,1 @@
-module.exports = {
-	Page: require('./Page'),
-};
+exports.Page = require('./Page');
