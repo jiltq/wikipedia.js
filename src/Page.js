@@ -56,6 +56,10 @@ module.exports = class Page {
 		const request = new RestRequest(`page/media-list/${this.title}${revision ? `/${revision}` : ''}`);
 		return await request.fetch();
 	}
+	/**
+	 * 
+	 * @returns 
+	 */
 	async related() {
 		const request = new RestRequest(`page/related/${this.title}`);
 		return await request.fetch();
