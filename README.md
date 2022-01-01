@@ -5,7 +5,6 @@ wikipedia.js is a lightweight [Node.js](https://nodejs.org) module that allows y
 
 - Object-oriented
 - Utilizes ES6 features
-- 100% (not really) coverage of the API
 
 ## Installation
 ```sh-session
@@ -13,6 +12,12 @@ npm i @jiltq/wikipedia.js
 yarn add @jiltq/wikipedia.js
 pnpm add @jiltq/wikipedia.js
 ```
+
+## Features
+
+- Fetch page content in different formats
+- Fetch aggregated daily featured content
+- (COMING SOON) Fetch mobile-friendly page content
 
 ## Example usage
 To get a summary of the movie *Shrek*:
@@ -74,7 +79,3 @@ const wiki = require('@jiltq/wikipedia.js');
   extract_html: '<p><i><b>Shrek</b></i> is a 2001 American computer-animated comedy film loosely based on the 1990 fairy tale picture book of the same name by William Steig. Directed by Andrew Adamson and Vicky Jenson in their directorial debuts, it stars Mike Myers, Eddie Murphy, Cameron Diaz, and John Lithgow as the voices of the lead characters. The film parodies other fairy tale adaptations, primarily aimed at animated Disney films. The story follows the titular Shrek (Myers), an ogre who finds his swamp overrun by fairy tale creatures who have been banished by the corrupt Lord Farquaad (Lithgow) aspiring to be king. Shrek makes a deal with Farquaad to regain control of his swamp in return for rescuing Princess Fiona (Diaz), whom Farquaad intends to marry. With the help of Donkey (Murphy), Shrek embarks on his quest but soon falls in love with the princess, who is hiding a secret that will change his life forever.</p>'
 }
 ```
-
----
-
-test test hi

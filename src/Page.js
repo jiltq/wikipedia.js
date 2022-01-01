@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 const RestRequest = require('./RestRequest.js');
 
 /**
@@ -56,8 +55,21 @@ module.exports = class Page {
 		const request = new RestRequest(`page/summary/${this.title}`);
 		return await request.fetch();
 	}
+	async mediaFiles(revision = null) {
+		const request = new RestRequest(`page/media-list/${this.title}${revision ? `/${revision}` : ''}`);
+		return await request.fetch();
+	}
 	async related() {
 		const request = new RestRequest(`page/related/${this.title}`);
+		return await request.fetch();
+	}
+	/**
+	 * Renders the page content as PDF. Format and type are optional parameters and the default values are "a4" for format and "desktop" for type.
+	 * @param {string} [format='a4'] PDF format
+	 * @param {string} [type='desktop'] PDF type
+	 */
+	async pdf(format = 'a4', type = 'desktop') {
+		const request = new RestRequest(`page/pdf/${this.title}/${format}/${type}`);
 		return await request.fetch();
 	}
 };
