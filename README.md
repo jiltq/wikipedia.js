@@ -1,4 +1,6 @@
 # wikipedia.js
+![](https://img.shields.io/npm/v/@jiltq/wikipedia.js.svg)
+![](https://img.shields.io/npm/dt/@jiltq/wikipedia.js.svg)
 
 ## About
 wikipedia.js is a lightweight [Node.js](https://nodejs.org) module that allows you to easily interact with the [Wikipedia REST API](https://en.wikipedia.org/api/rest_v1/#/)

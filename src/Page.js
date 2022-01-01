@@ -10,7 +10,6 @@ module.exports = class Page {
 	/**
 	 * Returns the revision metadata for the given title. If a revision ID is provided, metadata for that revision is returned, otherwise the latest revision ID is assumed.
 	 * @param {number} [revision=null] The revision id
-	 * @returns
 	 */
 	async revisionMetadata(revision = null) {
 		const request = new RestRequest(`page/title/${this.title}${revision ? `/${revision}` : ''}`);
@@ -19,24 +18,23 @@ module.exports = class Page {
 	/**
 	 * Get HTML for a specific title/revision & optionally timeuuid.
 	 * @param {number} [revision=null] The revision id
-	 * @returns
 	 */
 	async html(revision = null) {
 		const request = new RestRequest(`page/html/${this.title}${revision ? `/${revision}` : ''}`);
 		return await request.fetch();
 	}
 	/**
-	 * 
-	 * @param {*} revision 
-	 * @param {*} tid 
+	 * Get data-parsoid metadata for a specific title/revision/tid.
+	 * @param {number} revision The revision id
+	 * @param {string} tid The revision's time id
 	 */
 	async parsoidMetadata(revision, tid) {
-
+		const request = new RestRequest(`page/data-parsoid/${this.title}/${revision}/${tid}`);
+		return await request.fetch();
 	}
 	/**
 	 * Get the linter errors for a specific title/revision.
 	 * @param {number} [revision=null] The revision id
-	 * @returns
 	 */
 	async linterErrors(revision = null) {
 		const request = new RestRequest(`page/lint/${this.title}${revision ? `/${revision}` : ''}`);
@@ -45,7 +43,6 @@ module.exports = class Page {
 	/**
 	 * Fetch the segmented content of a page
 	 * @param {number} [revision=null] The revision id
-	 * @returns
 	 */
 	async segments(revision = null) {
 		const request = new RestRequest(`page/lint/${this.title}${revision ? `/${revision}` : ''}`);
