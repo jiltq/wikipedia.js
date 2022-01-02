@@ -27,12 +27,12 @@ class Feed {
 
 	/**
      * Type of event. Must be one of:
-     * `all` - all of the following
-     * `selected` - a list of a few selected anniversaries which occur on the provided day and month; often the entries are curated for the current year
-     * `births` - a list of birthdays which happened on the provided day and month
-     * `deaths` - a list of deaths which happened on the provided day and month
-     * `holidays` - a list of fixed holidays celebrated on the provided day and month
-     * `events` - a list of significant events which happened on the provided day and month and which are not covered by the other types yet
+     * * `all` - all of the following
+     * * `selected` - a list of a few selected anniversaries which occur on the provided day and month; often the entries are curated for the current year
+     * * `births` - a list of birthdays which happened on the provided day and month
+     * * `deaths` - a list of deaths which happened on the provided day and month
+     * * `holidays` - a list of fixed holidays celebrated on the provided day and month
+     * * `events` - a list of significant events which happened on the provided day and month and which are not covered by the other types yet
      * @typedef {string} eventType
      */
 
