@@ -1,3 +1,5 @@
+const sidebar = require('./sidebar.js');
+
 module.exports = {
     lang: 'en-US',
     title: 'wikipedia.js',
@@ -6,5 +8,8 @@ module.exports = {
     theme: '@vuepress/theme-default',
     themeConfig: {
         logo: 'https://vuejs.org/images/logo.png',
-    }
+        sidebar
+    },
+
+    home: '/docs/README.md'
   }
