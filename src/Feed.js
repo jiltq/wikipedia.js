@@ -13,7 +13,7 @@ class Feed {
      * @param {string} mm Month the aggregated content is requested for, 0-padded
      * @param {string} dd Day of the month the aggregated content is requested for, 0-padded
      */
-	async featured(yyyy = new Date().getFullYear(), mm = new Date().getDate(), dd = new Date().getMonth()) {
+	async featured(yyyy = new Date().getFullYear(), mm = new Date().getDate(), dd = new Date().getMonth() + 1) {
 		const request = new RestRequest(`feed/featured/${yyyy}/${mm}/${dd}`);
 		return await request.fetch();
 	}
@@ -42,7 +42,7 @@ class Feed {
      * @param {string} mm Month events are requested for, 0-padded
      * @param {string} dd Day of the month events are requested for, 0-padded
      */
-	async onThisDay(type, mm = new Date().getDate(), dd = new Date().getMonth()) {
+	async onThisDay(type, mm = new Date().getDate(), dd = new Date().getMonth() + 1) {
 		const request = new RestRequest(`feed/onthisday/${type}/${mm}/${dd}`);
 		return await request.fetch();
 	}
