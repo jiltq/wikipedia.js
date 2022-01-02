@@ -1,5 +1,9 @@
 module.exports = {
     title: 'wikipedia.js',
     description: 'Just playing around',
-    base: '/wikipedia.js/'
+    base: '/wikipedia.js/',
+    theme: '@vuepress/theme-default',
+    themeConfig: {
+        logo: 'https://vuejs.org/images/logo.png',
+    }
   }
