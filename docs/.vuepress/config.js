@@ -1,5 +1,4 @@
-const sidebar = require('./sidebar.js');
-console.log(process.cwd())
+/* const sidebar = require('./sidebar.js'); */
 
 module.exports = {
     lang: 'en-US',
@@ -9,7 +8,28 @@ module.exports = {
     theme: '@vuepress/theme-default',
     themeConfig: {
         logo: 'https://vuejs.org/images/logo.png',
-        sidebar
+        sidebar: {
+            '/': [
+                {
+                    text: 'Home',
+                    children: ['/'],
+                },
+                {
+                    text: 'Setup',
+                    children: [
+                        '/setup/README.md'
+                    ],
+                },
+                {
+                    text: 'Classes',
+                    children: [
+                        '/page/README.md',
+                        '/feed/README.md',
+                        '/requests/README.md'
+                    ],
+                },
+            ],
+        }
     },
 
     home: '/docs/README.md'
