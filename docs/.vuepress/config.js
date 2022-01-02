@@ -1,4 +1,5 @@
 const sidebar = require('./sidebar.js');
+console.log(process.cwd())
 
 module.exports = {
     lang: 'en-US',
