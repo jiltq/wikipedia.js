@@ -1,0 +1,1 @@
+const e={key:"v-151af027",path:"/page/",title:"Page",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"Methods",slug:"methods",children:[]}],git:{updatedTime:1641168985e3,contributors:[{name:"jiltq",email:"89758063+jiltq@users.noreply.github.com",commits:1}]},filePathRelative:"page/README.md"};export{e as data};
